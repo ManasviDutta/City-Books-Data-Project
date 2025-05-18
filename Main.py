@@ -59,7 +59,7 @@ for title in df1["Title"]:
                 "Language": volume_info.get("language", "N/A")
             })
         else:
-            print(f"❌ No data for: {title}")
+            print(f" No data for: {title}")
             book_info.append({
                 "Title": title,
                 "PublishedDate": "N/A",
@@ -69,7 +69,7 @@ for title in df1["Title"]:
                 "Language": "N/A"
             })
     else:
-        print(f"❌ API call failed for: {title}")
+        print(f" API call failed for: {title}")
         book_info.append({
             "Title": title,
             "PublishedDate": "N/A",
@@ -83,7 +83,7 @@ for title in df1["Title"]:
 
 # Create DF2
 df2 = pd.DataFrame(book_info)
-print("\n📘 Google Books API Data:")
+print("\n Google Books API Data:")
 print(df2.head())
 
 
